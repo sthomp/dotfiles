@@ -27,7 +27,6 @@ filetype plugin indent on
 " vim config
 
 syntax on
-colorscheme molokai
 
 let mapleader = ","
 let g:rehash256 = 1
@@ -54,3 +53,4 @@ set scrolloff=10        " Keep search results centered
 nnoremap <leader>d :NERDTreeToggle<cr>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
+colorscheme molokai
