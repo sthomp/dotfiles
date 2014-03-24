@@ -17,6 +17,9 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'tomasr/molokai'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'pangloss/vim-javascript'
+Bundle 'Raimondi/delimitMate'
+Bundle 'vim-scripts/IndexedSearch'
+Bundle 'othree/html5.vim'
 
 filetype plugin indent on
 
@@ -28,23 +31,26 @@ colorscheme molokai
 
 let mapleader = ","
 let g:rehash256 = 1
+let delimitMate_expand_cr=1
 
 set background=dark
 set t_Co=256
 set nowrap
 set expandtab
+set smarttab
+set autoindent
+set cindent
 set tabstop=2
 set shiftwidth=2
 set number              " line numbers
-set autoindent
 set hlsearch            " highlight search
 set incsearch           " do incremental searching
 set ruler               " show the cursor position all the time
 set history=50          " keep 50 lines of command line history
-set mouse=a         
+set mouse=a             
 set wildmode=longest
+set scrolloff=10        " Keep search results centered
 
 nnoremap <leader>d :NERDTreeToggle<cr>
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-inoremap ( ()<Esc>i
