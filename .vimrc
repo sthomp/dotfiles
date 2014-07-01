@@ -9,17 +9,22 @@ call vundle#rc()
 " call vundle#rc(path)
 
 " let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " 3rd party packages:
-Bundle 'scrooloose/nerdtree'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'tomasr/molokai'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'pangloss/vim-javascript'
-Bundle 'Raimondi/delimitMate'
-Bundle 'vim-scripts/IndexedSearch'
-Bundle 'othree/html5.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-vividchalk'
+Plugin 'tomasr/molokai'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'pangloss/vim-javascript'
+Plugin 'vim-scripts/IndexedSearch'
+Plugin 'othree/html5.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'guns/vim-clojure-static'
+Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-highlight'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-scripts/paredit.vim'
 
 filetype plugin indent on
 
@@ -46,7 +51,6 @@ set hlsearch            " highlight search
 set incsearch           " do incremental searching
 set ruler               " show the cursor position all the time
 set history=50          " keep 50 lines of command line history
-set mouse=a             
 set wildmode=longest
 set scrolloff=10        " Keep search results centered
 
@@ -54,3 +58,6 @@ nnoremap <leader>d :NERDTreeToggle<cr>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 colorscheme molokai
+
+ au VimEnter * RainbowParenthesesToggle
+ au Syntax * RainbowParenthesesLoadRound
