@@ -19,12 +19,15 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'vim-scripts/IndexedSearch'
 Plugin 'othree/html5.vim'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'guns/vim-clojure-static'
-Plugin 'tpope/vim-fireplace'
-Plugin 'guns/vim-clojure-highlight'
+" Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'guns/vim-clojure-static'
+" Plugin 'tpope/vim-fireplace'
+" Plugin 'guns/vim-clojure-highlight'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/paredit.vim'
+Plugin 'fatih/vim-go'
+" Plugin 'Valloric/YouCompleteMe.git'
+
 
 filetype plugin indent on
 
@@ -53,11 +56,12 @@ set ruler               " show the cursor position all the time
 set history=50          " keep 50 lines of command line history
 set wildmode=longest
 set scrolloff=10        " Keep search results centered
+set guifont=Monaco:h16
 
 nnoremap <leader>d :NERDTreeToggle<cr>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 colorscheme molokai
 
- au VimEnter * RainbowParenthesesToggle
- au Syntax * RainbowParenthesesLoadRound
+" au VimEnter * RainbowParenthesesToggle
+" au Syntax * RainbowParenthesesLoadRound
