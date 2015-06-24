@@ -59,6 +59,10 @@ set scrolloff=10        " Keep search results centered
 set guifont=Monaco:h16
 
 nnoremap <leader>d :NERDTreeToggle<cr>
+" autocmd filetype go nnoremap <leader>c :w <bar> exec '!go build'<CR>
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <Leader>i <Plug>(go-info)
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 colorscheme molokai
