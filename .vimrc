@@ -2,18 +2,18 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 " alternatively, pass a path where Vundle should install bundles
 " let path = '~/some/path/here'
 " call vundle#rc(path)
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " 3rd party packages:
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-vividchalk'
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'tpope/vim-vividchalk'
 Plugin 'tomasr/molokai'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'pangloss/vim-javascript'
@@ -23,13 +23,14 @@ Plugin 'othree/html5.vim'
 " Plugin 'guns/vim-clojure-static'
 " Plugin 'tpope/vim-fireplace'
 " Plugin 'guns/vim-clojure-highlight'
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/paredit.vim'
 Plugin 'fatih/vim-go'
 " Plugin 'Valloric/YouCompleteMe.git'
 
-
-filetype plugin indent on
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 
 " vim config
